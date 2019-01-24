@@ -1,0 +1,321 @@
+@charset "utf-8";
+@import url("standard.css");
+
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+#wrapper{
+    max-width:1200px;
+    margin:0 auto;
+	
+	padding-left:5px;
+	padding-right: 5px;
+}
+
+body{
+    background-color:#000;
+    color:#fff;
+    font-family: arial, sans-serif;
+    font-size:20px;
+}
+
+h1, h2, h3, h4, h5, h6, #prev, #next{
+    font-family: 'Kirang Haerang', cursive, serif, sans-serif;
+	font-weight:lighter
+}
+
+img{
+	display:block;
+}
+
+a{
+	color:#7e0000!important;
+	text-decoration:none;
+	transition: 200ms;
+	
+	cursor: pointer;
+}
+
+a:hover{
+	color:#AB0002!important;
+}
+
+/*----------------header----------------*/
+header{
+    margin:1% 0 2% 0;
+}
+
+h1{
+    text-align: center;
+    font-size:5.25em;
+}
+
+/*----------------------------Main----------------------------*/
+/*-----------Gallery-----------*/
+#gallery{
+	width:80%;
+	margin:0 auto 4% auto;
+	
+	overflow: hidden;
+}
+
+#main-gallery{
+	width:80%;
+	margin:2% auto;
+	clear:both;
+	
+	position: relative;
+}
+
+
+#thumbs img{
+	width:20%; 
+	float:left;
+	padding:5px;
+	cursor: pointer;
+	
+	opacity: 0.5;
+}
+
+/*-----Arrows-----*/
+#prev, #next{
+	position: absolute;
+	top:150px;
+	
+	font-size:5em;
+	cursor: pointer;
+	z-index: 3;
+}
+
+#prev{
+	left:-80px;
+}
+
+#next{
+	right:-80px;
+}
+
+/*-----------Text/Article-----------*/
+h2{
+	font-size:2.4em;
+}
+
+p{
+	font-size:0.9em;
+	line-height:2em;
+}
+
+article{
+	margin:5% 0;
+}
+
+.article-pics{
+	margin-left: 8.333%;
+}
+
+.article-pics img{
+	padding-top:70px;
+}
+
+/*The hidden text*/
+.read-text{
+	display:none;
+}
+
+#read-more{
+	color:#C80003;
+	transition: 200ms;
+	cursor: pointer;
+}
+
+#read-more:hover{
+	color:#AB0002;
+}
+
+/*-----------Albums line-----------*/
+#albums{
+	margin:7% 0 5% 0;
+}
+
+#albums img{
+	width:25%;
+	padding:15px;
+	float:left;
+	
+	cursor: pointer;
+}
+
+/*animation*/
+.rotate-albums{
+	animation: rotate_albums 0.4s infinite;
+}
+
+@keyframes rotate_albums{
+	0%{transform: rotate(0deg); z-index: 2;}
+	10%{transform: rotate(90deg);}
+	20%{transform: rotate(180deg);}
+	30%{transform: rotate(270deg);}
+	40%{transform: rotate(360deg);}
+	50%{transform: rotate(90deg);}
+	60%{transform: rotate(180deg);}
+	70%{transform: rotate(270deg);}
+	80%{transform: rotate(360deg);}
+	90%{transform: rotate(90deg);}
+	100%{transform: rotate(360deg);}
+}
+
+/*-----------Video-----------*/
+#video {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+	
+	width:66.666%;
+	margin:15% auto 0 auto;
+}
+
+#video iframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:80%;
+	
+	border:0;
+}
+
+/*----------------footer----------------*/
+footer{
+	text-align: center;
+}
+
+footer p:first-child{
+	font-size:2.4em;
+	padding-bottom: 0;	
+		
+}
+
+footer p:nth-child(2){
+	font-size:1.5em;
+}
+
+
+/*-----------------------------Media-----------------------------*/
+@media screen and (max-width: 900px){
+	a:hover{
+		color:#7e0000!important;
+	}
+	
+	#main-gallery p{
+		font-size:3em;
+	}
+	
+	#read-more:hover{
+		color:#C80003;
+	}
+	
+	#next{
+		right:-40px;
+		top:125px;
+	}
+	
+	#prev{
+		left:-40px;
+		top:125px;
+	}
+	
+}
+
+@media screen and (max-width: 700px){
+	#main-gallery p{
+		font-size:3em;
+	}
+	
+	#next{
+		right:-40px;
+		top:100px;
+	}
+	
+	#prev{
+		left:-40px;
+		top:100px;
+	}
+	
+}/*End of 700px*/
+
+
+@media screen and (max-width: 500px){
+	[class*="col"]{
+		width:100%;
+		float:none;
+		
+		padding-left:5px;
+		padding-right:5px;
+	}
+	
+	.left, .right{
+		float:none;
+	}
+	
+	#main-gallery{
+		width:100%;
+	}
+	
+	#thumbs img{
+		width:50%;
+	}
+	
+	#thumbs img:last-child{
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+	
+	.article-pics{
+		margin-left: 0;
+	}
+	
+	#albums img{
+		padding:5px;
+	}
+	
+	#next, #prev{
+		display:none;
+	}
+	
+	.article-pics img{
+		display: none!important;
+	}
+	
+	p{
+		font-size:0.7em;
+	}
+	
+	footer p:first-child{
+	font-size:2em	
+		
+	}
+
+	footer p:nth-child(2){
+		font-size:1em;
+	}
+	
+}/*End of 500px*/
+
+
+@media screen and (max-width: 400px){
+	
+	h1{
+		font-size:3.5em;
+	}
+	
+	h2{
+		font-size:1.8em;
+	}
+	
+	footer p:nth-child(2){
+		font-size:0.7em;
+	}
+}
+
