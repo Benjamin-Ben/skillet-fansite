@@ -1,2 +1,2 @@
 # skillet-fansite
-This is a fansite I made on Skillet
+This is a fansite I made based on the rock band Skillet
